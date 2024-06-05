@@ -1,0 +1,118 @@
+;<!DOCTYPE html>
+<html>
+  <title>Hemvärnets befattningsguide (HvBG)</title>
+  <head>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <form>
+      <h1>Hemvärnets befattningsguide (HvBG)</h1>
+      <div class="formcontainer">
+    
+      <div class="container" id="detailsForm" style="display:none;">
+        
+      <div class="container" style="background-color: #eee">
+        <table>
+          <tr>
+            <th>Tjänst</th>
+            <td><span id="BEN"></td>
+          </tr>
+          <tr>
+            <th>Organisation</th>
+            <td><span id="ORG"></td>
+          </tr>
+          <tr>
+            <th>Enhet/Sektion</th>
+            <td><span id="ENH"></td>
+          </tr>          
+          <tr>
+            <th>Avtalsdagar</th>
+            <td><span id="DYGN"></td>
+          </tr>
+        </table>            
+      </div>
+        
+      <div class="container" style="margin-top:25px; background-color: #eee">
+          <span style="padding-left: 15px;padding-right: 15px">
+            <b>Grad och befodran</b>
+          </span>
+        <table id="promotion">
+          <tr>
+<td><i class="fas fa-check-square"></i> Vid initial placering bibehålles befintlig grad intill hen har uppfyllt utbildningskraven. Förkunskapskraven måste alltid uppfyllas innan placering.</td>   
+          </tr>
+        </table>
+      </div>
+        
+      <div class="container" style="margin-top:25px; background-color: #eee">
+          <span style="padding-left: 15px;padding-right: 15px">
+            <b>Ersättningar</b>
+          </span>
+        <table id="moneytable">
+          <tr>
+          </tr>
+        </table>
+      </div>        
+       
+      <div class="container" style="margin-top:25px; background-color: #eee">
+          <span style="padding-left: 15px;padding-right: 15px">
+            <b>Förkunskapskrav (för att tillträda)</b>
+          </span>
+        <table id="precond">
+          <tr>
+          </tr>
+        </table>
+      </div>
+        
+      <div class="container" style="margin-top:25px; background-color: #eee">
+          <span style="padding-left: 15px;padding-right: 15px">
+            <b>Utbildningskrav (inom 3 år)</b>
+          </span>
+        <table id="demands">
+          <tr>
+          </tr>
+        </table>
+      </div>   
+        
+      <div class="container" style="margin-top:25px; background-color: #eee">
+          <span style="padding-left: 15px;padding-right: 15px">
+            <b>Utbildningsrekommendationer</b>
+          </span>
+        <table id="recommends">
+          <tr>
+          </tr>
+        </table>
+      </div>           
+        
+        <div class="btn-block">
+        <button type="button" onclick="reloadBtn()" id="reloadButton">Visa annan befattning</button>
+        </div>        
+        
+       </div>
+        
+      <div class="container" id="selectorForm">
+
+      <div class="container" style="background-color: #eee; margin-bottom: 15px">
+          <div style="padding-left: 15px;padding-right: 15px">
+            <small>Denna guide är använder data från senast fastställda HVMASTER fastställd av rikshemvärnschefen 2023-02-20 (Vidar: FM2023-3916). Guiden är producerad av Personalsektionen (S1) vid 25.Hemvärnsbataljonsstaben.</small>
+          </div>
+      </div>        
+        
+        <select id="orgSelect" onChange="selectOrg(this);">
+                  <option selected value="">Välj organisation..</option>
+        </select>
+        <select id="unitSelect" onChange="selectUnit(this);" disabled>
+                  <option selected value="">Välj enhet/sektion..</option>
+        </select>
+        <select id="roleSelect" onChange="selectRole(this);" disabled>
+                  <option selected value="">Välj roll..</option>
+        </select>
+        <div class="btn-block">
+        <button type="button" onclick="openRole()" id="detailsBtn" disabled>Visa befattningsdetaljer</button>
+        </div>
+      </div>
+    </form>
+    <script src="script.js"></script>
+  </body>
+</html>
